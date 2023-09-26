@@ -1,9 +1,27 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+
+/* create css varibales to accept the background color  */
+
+*,*::after, *::before{
+    
+
+
+
+
+}
+
+:root{
+    --primary:rgb(171, 0, 0);
+    --secondary: #ffffff;
+    --accent: #000000;
+
+}
+
 body {
     color: #666666;
-    background: #dddddd;
+    background: var(--secondary);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
@@ -14,7 +32,7 @@ h3,
 h4,
 h5, 
 h6 {
-    color: #030f27;
+    color: var(--accent);
 }
 
 a {
@@ -25,7 +43,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #fdbe33;
+    color:var(--primary);
     outline: none;
     text-decoration: none;
 }
@@ -39,13 +57,13 @@ a:focus {
     width: 100%;
     max-width: 1366px;
     margin: 0 auto;
-    background: #ffffff;
+    background: var(--secondary);
 }
 
 .back-to-top {
     position: fixed;
     display: none;
-    background: #fdbe33;
+    background:var(--primary);
     color: #121518;
     width: 44px;
     height: 44px;
@@ -59,7 +77,7 @@ a:focus {
 }
 
 .back-to-top:hover {
-    color: #fdbe33;
+    color:var(--primary);
     background: #121518;
 }
 
@@ -78,7 +96,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 90px;
-    background: #fdbe33;
+    background:var(--secondary);
 }
 
 .top-bar .logo {
@@ -155,7 +173,7 @@ a:focus {
 /**********************************/
 .nav-bar {
     position: relative;
-    background: #fdbe33;
+    background:var(--primary);
     transition: .3s;
 }
 
@@ -174,7 +192,7 @@ a:focus {
 
 .nav-bar .navbar {
     height: 100%;
-    background: #030f27 !important;
+    background: var(--accent) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -182,12 +200,12 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #fdbe33;
+    color:var(--primary);
     transition: none;
 }
 
@@ -199,15 +217,15 @@ a:focus {
 }
 
 .nav-bar .btn {
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
     border-radius: 0;
 }
 
 .nav-bar .btn:hover {
-    color: #030f27;
-    background: #fdbe33;
-    border-color: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
+    border-color:var(--primary);
 }
 
 @media (min-width: 992px) {
@@ -303,14 +321,14 @@ a:focus {
 }
 
 .carousel .carousel-caption p {
-    color: #ffffff;
+    color: var(--secondary);
     font-size: 30px;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
 .carousel .carousel-caption h1 {
-    color: #ffffff;
+    color: var(--secondary);
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 35px;
@@ -322,17 +340,17 @@ a:focus {
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--secondary);
     background: transparent;
-    border: 2px solid #ffffff;
+    border: 2px solid var(--secondary);
     border-radius: 0;
     transition: .3s;
 }
 
 .carousel .carousel-caption .btn:hover {
-    color: #030f27;
-    background: #fdbe33;
-    border-color: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
+    border-color:var(--primary);
 }
 
 @media (max-width: 767.98px) {
@@ -385,12 +403,12 @@ a:focus {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .page-header h2 {
     position: relative;
-    color: #030f27;
+    color: var(--accent);
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -404,18 +422,18 @@ a:focus {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #030f27;
+    background: var(--accent);
 }
 
 .page-header a {
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #030f27;
+    color: var(--accent);
 }
 
 .page-header a:hover {
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .page-header a::after {
@@ -472,7 +490,7 @@ a:focus {
 }
 
 .section-header p {
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -501,12 +519,12 @@ a:focus {
 }
 
 .feature .col-md-12 {
-    background: #030f27;
+    background: var(--accent);
 }
     
 .feature .col-md-12:nth-child(2n) {
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
 }
 
 .feature .feature-item {
@@ -532,7 +550,7 @@ a:focus {
     height: 80px;
     top: -20px;
     left: -10px;
-    border: 2px dotted #ffffff;
+    border: 2px dotted var(--secondary);
     border-radius: 60px;
     z-index: 1;
 }
@@ -544,19 +562,19 @@ a:focus {
     height: 79px;
     top: -18px;
     left: -9px;
-    background: #030f27;
+    background: var(--accent);
     border-radius: 60px;
     z-index: 2;
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -568,14 +586,14 @@ a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 25px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 18px;
     font-weight: 400;
 }
@@ -583,7 +601,7 @@ a:focus {
 .feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
 .feature .col-md-12:nth-child(2n) h3,
 .feature .col-md-12:nth-child(2n) p {
-    color: #030f27;
+    color: var(--accent);
 }
 
 
@@ -622,15 +640,15 @@ a:focus {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #030f27;
+    color: var(--accent);
     border-radius: 0;
-    background: #fdbe33;
+    background:var(--primary);
     transition: .3s;
 }
 
 .about .about-text a.btn:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 @media (max-width: 767.98px) {
@@ -668,13 +686,13 @@ a:focus {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(#ffffff, #fdbe33);
+    background-image: linear-gradient(var(--secondary),var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .fact .fact-right .fact-icon [class^="flaticon-"]::before {
-    background-image: linear-gradient(#ffffff, #030f27);
+    background-image: linear-gradient(var(--secondary), var(--accent));
 }
 
 .fact .fact-left,
@@ -696,17 +714,17 @@ a:focus {
 }
 
 .fact .fact-left {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .fact .fact-right {
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
 }
 
 .fact .fact-left h2 {
-    color: #fdbe33;
+    color:var(--primary);
 }
 
 
@@ -756,14 +774,14 @@ a:focus {
 
 .service .service-overlay p {
     margin: 0;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .service .service-text {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #030f27;
+    background: var(--accent);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -775,7 +793,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #fdbe33;
+    color:var(--primary);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -792,14 +810,14 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
     border-radius: 0;
     transition: .3s;
 }
 
 .service .service-item:hover a.btn {
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 
@@ -844,7 +862,7 @@ a:focus {
     display: block;
     width: 100px;
     height: 100px;
-    background: #fdbe33;
+    background:var(--primary);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -859,7 +877,7 @@ a:focus {
     display: block;
     width: 100px;
     height: 100px;
-    background: #fdbe33;
+    background:var(--primary);
     border-radius: 50%;
     transition: all 200ms;
 }
@@ -882,7 +900,7 @@ a:focus {
     z-index: 3;
     width: 0;
     height: 0;
-    border-left: 32px solid #030f27;
+    border-left: 32px solid var(--accent);
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
 }
@@ -918,7 +936,7 @@ a:focus {
     z-index: 999;
     font-size: 30px;
     font-weight: normal;
-    color: #ffffff;
+    color: var(--secondary);
     background: #000000;
     opacity: 1;
 }
@@ -951,28 +969,28 @@ a:focus {
     position: relative;
     padding: 25px 15px;
     text-align: center;
-    background: #030f27;
+    background: var(--accent);
     transition: .5s;
 }
 
 .team .team-text h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #fdbe33;
+    color:var(--primary);
     transition: .5s;
 }
 
 .team .team-text p {
     margin: 0;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .team .team-item:hover .team-text {
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .team .team-item:hover .team-text h2 {
-    color: #030f27;
+    color: var(--accent);
     letter-spacing: 1px;
 }
 
@@ -985,7 +1003,6 @@ a:focus {
     flex-direction: column;
     font-size: 0;
 }
-
 .team .team-social a {
     position: relative;
     left: 0;
@@ -995,7 +1012,7 @@ a:focus {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .team .team-item:hover .team-social a:first-child {
@@ -1021,7 +1038,7 @@ a:focus {
     left: 50px;
     transition: .3s .3s;
 }
-
+/* create an hover effect on the team card children */
 
 /*******************************/
 /*********** FAQs CSS **********/
@@ -1043,7 +1060,7 @@ a:focus {
     height: 100%;
     top: 0;
     left: calc(50% - .5px);
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .faqs #accordion-1 {
@@ -1082,7 +1099,7 @@ a:focus {
 .faqs .card-header {
     padding: 0;
     border: none;
-    background: #ffffff;
+    background: var(--secondary);
 }
 
 .faqs .card-header a {
@@ -1097,14 +1114,14 @@ a:focus {
 }
 
 .faqs .card-header [data-toggle="collapse"][aria-expanded="true"] {
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .faqs .card-header [data-toggle="collapse"]:after {
     font-family: 'font Awesome 5 Free';
     content: "\f067";
     float: right;
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 12px;
     font-weight: 900;
     transition: .5s;
@@ -1114,7 +1131,7 @@ a:focus {
     font-family: 'font Awesome 5 Free';
     content: "\f068";
     float: right;
-    color: #030f27;
+    color: var(--accent);
     font-size: 12px;
     font-weight: 900;
     transition: .5s;
@@ -1123,7 +1140,7 @@ a:focus {
 .faqs .card-body {
     padding: 20px 25px;
     font-size: 16px;
-    background: #ffffff;
+    background: var(--secondary);
     border: 1px solid rgba(0, 0, 0, .1);
     border-top: none;
 }
@@ -1200,7 +1217,7 @@ a:focus {
 }
 
 .testimonial .testimonial-slider h3 {
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 22px;
     font-weight: 700;
 }
@@ -1208,13 +1225,13 @@ a:focus {
 .testimonial .testimonial-slider h4 {
     font-size: 14px;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--secondary);
     font-style: italic;
     margin-bottom: 10px;
 }
 
 .testimonial .testimonial-slider p {
-    color: #ffffff;
+    color: var(--secondary);
     font-size: 16px;
     font-weight: 300;
     margin: 0;
@@ -1250,7 +1267,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #030f27;
+    background: var(--accent);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1262,7 +1279,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 18px;
     font-weight: 700;
-    color: #fdbe33;
+    color:var(--primary);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -1279,14 +1296,14 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
     border-radius: 0;
     transition: .3s;
 }
 
 .blog .blog-item:hover a.btn {
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .blog .blog-meta {
@@ -1302,7 +1319,7 @@ a:focus {
     height: 1px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .blog .blog-meta p {
@@ -1331,15 +1348,15 @@ a:focus {
 }
 
 .blog .pagination .page-link {
-    color: #030f27;
+    color: var(--accent);
     border-radius: 0;
-    border-color: #fdbe33;
+    border-color:var(--primary);
 }
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .blog .pagination .disabled .page-link {
@@ -1382,8 +1399,8 @@ a:focus {
 }
 
 .single .single-tags a:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .single .single-bio {
@@ -1496,16 +1513,16 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
     font-size: 16px;
     transition: .3s;
 }
 
 .single .related-slider .owl-nav .owl-prev:hover,
 .single .related-slider .owl-nav .owl-next:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .single .single-comment {
@@ -1562,13 +1579,13 @@ a:focus {
 .single .comment-text .btn {
     padding: 3px 10px;
     font-size: 14px;
-    color: #030f27;
+    color: var(--accent);
     background: #dddddd;
     border-radius: 0;
 }
 
 .single .comment-text .btn:hover {
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .single .comment-form {
@@ -1597,13 +1614,13 @@ a:focus {
 
 .single .comment-form .btn {
     padding: 15px 30px;
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
 }
 
 .single .comment-form .btn:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 
@@ -1641,7 +1658,7 @@ a:focus {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .sidebar .sidebar-widget .search-widget {
@@ -1665,7 +1682,7 @@ a:focus {
     height: 40px;
     padding: 0;
     font-size: 25px;
-    color: #fdbe33;
+    color:var(--primary);
     background: none;
     border-radius: 0;
     border: none;
@@ -1673,7 +1690,7 @@ a:focus {
 }
 
 .sidebar .search-widget .btn:hover {
-    color: #030f27;
+    color: var(--accent);
 }
 
 .sidebar .sidebar-widget .recent-post {
@@ -1685,15 +1702,15 @@ a:focus {
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
     border-radius: 0;
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link:hover,
 .sidebar .tab-post .nav.nav-pills .nav-link.active {
-    color: #030f27;
-    background: #fdbe33;
+    color: var(--accent);
+    background:var(--primary);
 }
 
 .sidebar .tab-post .tab-content {
@@ -1733,7 +1750,7 @@ a:focus {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #fdbe33;
+    color:var(--primary);
     left: 1px;
 }
 
@@ -1758,8 +1775,8 @@ a:focus {
 }
 
 .single .tag-widget a:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .sidebar .image-widget {
@@ -1800,20 +1817,20 @@ a:focus {
     display: inline-block;
     margin: 5px;
     padding: 8px 15px;
-    color: #030f27;
+    color: var(--accent);
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 0;
-    background: #fdbe33;
+    background:var(--primary);
     border: none;
     transition: .3s;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #030f27;
-    color: #fdbe33;
+    background: var(--accent);
+    color:var(--primary);
 }
 
 .portfolio .load-more {
@@ -1827,8 +1844,8 @@ a:focus {
 }
 
 .portfolio .load-more .btn:hover {
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
 }
 
 .portfolio .portfolio-warp {
@@ -1873,14 +1890,14 @@ a:focus {
 
 .portfolio .portfolio-overlay p {
     margin: 0;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .portfolio .portfolio-text {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #030f27;
+    background: var(--accent);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1892,7 +1909,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #fdbe33;
+    color:var(--primary);
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -1909,15 +1926,15 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #030f27;
-    background: #ffffff;
+    color: var(--accent);
+    background: var(--secondary);
     border-radius: 0;
     transition: .3s;
 }
 
 .portfolio .portfolio-warp:hover a.btn {
-    color: #ffffff;
-    background: #fdbe33;
+    color: var(--secondary);
+    background:var(--primary);
 }
 
 
@@ -1936,11 +1953,11 @@ a:focus {
 }
 
 .contact .col-md-6:first-child {
-    background: #030f27;
+    background: var(--accent);
 }
 
 .contact .col-md-6:last-child {
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .contact .contact-info {
@@ -1961,7 +1978,7 @@ a:focus {
 
 .contact .contact-item [class^="flaticon-"]::before {
     margin: 0;
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 40px;
 }
 
@@ -1972,14 +1989,14 @@ a:focus {
 }
 
 .contact .contact-text h2 {
-    color: #fdbe33;
+    color:var(--primary);
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact .contact-text p {
     margin: 0;
-    color: #ffffff;
+    color: var(--secondary);
     font-size: 16px;
 }
 
@@ -1993,7 +2010,7 @@ a:focus {
 }
 
 .contact .contact-form input {
-    color: #ffffff;
+    color: var(--secondary);
     height: 40px;
     border-radius: 0;
     border-width: 1px;
@@ -2002,7 +2019,7 @@ a:focus {
 }
 
 .contact .contact-form textarea {
-    color: #ffffff;
+    color: var(--secondary);
     height: 185px;
     border-radius: 0;
     border-width: 1px;
@@ -2016,32 +2033,32 @@ a:focus {
 }
 
 .contact .contact-form .form-control::placeholder {
-  color: #ffffff;
+  color: var(--secondary);
   opacity: 1;
 }
 
 .contact .contact-form .form-control::-ms-input-placeholder {
-  color: #ffffff;
+  color: var(--secondary);
 }
 
 .contact .contact-form .form-control::-ms-input-placeholder {
-  color: #ffffff;
+  color: var(--secondary);
 }
 
 .contact .contact-form .btn {
     padding: 16px 30px;
     font-size: 16px;
     font-weight: 600;
-    color: #fdbe33;
-    background: #030f27;
+    color:var(--primary);
+    background: var(--accent);
     border: none;
     border-radius: 0;
     transition: .3s;
 }
 
 .contact .contact-form .btn:hover {
-    color: #030f27;
-    background: #ffffff;
+    color: var(--accent);
+    background: var(--secondary);
 }
 
 .contact .help-block ul {
@@ -2058,8 +2075,8 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 90px;
-    background: #030f27;
-    color: #ffffff;
+    background: var(--accent);
+    color: var(--secondary);
 }
 
 .footer .footer-contact,
@@ -2075,7 +2092,7 @@ a:focus {
     padding-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
-    color: #fdbe33;
+    color:var(--primary);
 }
 
 .footer h2::after {
@@ -2085,13 +2102,13 @@ a:focus {
     height: 2px;
     left: 0;
     bottom: 0;
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .footer .footer-link a {
     display: block;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: var(--secondary);
     transition: .3s;
 }
 
@@ -2104,7 +2121,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #fdbe33;
+    color:var(--primary);
     letter-spacing: 1px;
 }
 
@@ -2130,16 +2147,16 @@ a:focus {
 
 .footer .footer-social a i {
     font-size: 15px;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .footer .footer-social a:hover {
-    background: #fdbe33;
-    border-color: #fdbe33;
+    background:var(--primary);
+    border-color:var(--primary);
 }
 
 .footer .footer-social a:hover i {
-    color: #030f27;
+    color: var(--accent);
 }
 
 .footer .newsletter .form {
@@ -2163,16 +2180,16 @@ a:focus {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #fdbe33;
+    color:var(--primary);
     background: #121518;
     border-radius: 0;
-    border: 2px solid #fdbe33;
+    border: 2px solidvar(--primary);
     transition: .3s;
 }
 
 .footer .newsletter .btn:hover {
     color: #121518;
-    background: #fdbe33;
+    background:var(--primary);
 }
 
 .footer .footer-menu .f-menu {
@@ -2185,7 +2202,7 @@ a:focus {
 }
 
 .footer .footer-menu .f-menu a {
-    color: #ffffff;
+    color: var(--secondary);
     font-size: 16px;
     margin-right: 15px;
     padding-right: 15px;
@@ -2193,7 +2210,7 @@ a:focus {
 }
 
 .footer .footer-menu .f-menu a:hover {
-    color: #fdbe33;
+    color:var(--primary);
 }
 
 .footer .footer-menu .f-menu a:last-child {
@@ -2209,7 +2226,7 @@ a:focus {
 
 .footer .copyright p {
     margin: 0;
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 .footer .copyright .col-md-6:last-child p {
@@ -2217,13 +2234,13 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #fdbe33;
+    color:var(--primary);
     font-weight: 500;
     letter-spacing: 1px;
 }
 
 .footer .copyright p a:hover {
-    color: #ffffff;
+    color: var(--secondary);
 }
 
 @media (max-width: 768px) {
